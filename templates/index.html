@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girish Fedram - Senior Python Backend Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b8b7b9e2e.js" crossorigin="anonymous"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom cursor -->
+    <style>
+        * { cursor: none !important; }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #667eea;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: 0.1s;
+            backdrop-filter: blur(2px);
+        }
+        .custom-cursor-trail {
+            width: 8px;
+            height: 8px;
+            background: #f093fb;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: 0.15s;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+    
+    <!-- Floating Download Resume Button -->
+    <div class="floating-download-btn" id="floatingDownloadBtn">
+        <a href="{{ url_for('download_resume') }}" class="floating-btn">
+            <i class="fas fa-download"></i>
+            <span class="floating-btn-text">Download Resume</span>
+        </a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-advanced" id="home">
+        <div class="hero-background">
+            <div class="floating-particles"></div>
+            <div class="code-rain"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-first">Girish</span>
+                    <span class="name-last">Fedram</span>
+                </h1>
+                <div class="hero-roles">
+                    <div class="role-switcher">
+                        <span class="role active">Senior Python Backend Engineer</span>
+                        <span class="role">Cloud Solutions Architect</span>
+                        <span class="role">Microservices Architect</span>
+                        <span class="role">DevOps Engineer</span>
+                    </div>
+                </div>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    Crafting scalable backend solutions for 7+ years. Specialized in Python ecosystem, 
+                    cloud-native architectures, and high-performance distributed systems.
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime Achieved</span>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Technologies Mastered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container-fluid">
+        <!-- About Section -->
+        <section id="about" class="section-advanced">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <p class="about-text">
+                                I'm a passionate backend engineer with 7+ years of experience building scalable, 
+                                high-performance systems that power modern applications. My expertise spans from 
+                                designing microservices architectures to optimizing database performance at scale.
+                            </p>
+                            <p class="about-text">
+                                Currently leading backend development at Huawei Cloud Middle East, where I architect 
+                                solutions for government-scale projects. I specialize in Python ecosystems, 
+                                cloud-native technologies, and DevOps practices.
+                            </p>
+                            <div class="expertise-grid">
+                                <div class="expertise-item">
+                                    <i class="fas fa-server"></i>
+                                    <span>Backend Architecture</span>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-cloud"></i>
+                                    <span>Cloud Solutions</span>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>Database Design</span>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>DevOps & CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tech-showcase">
+                            <div class="tech-grid-3d">
+                                <div class="tech-cube" style="--delay: 0s">
+                                    <div class="cube-face front">Python</div>
+                                    <div class="cube-face back">Django</div>
+                                    <div class="cube-face right">Flask</div>
+                                    <div class="cube-face left">FastAPI</div>
+                                    <div class="cube-face top">APIs</div>
+                                    <div class="cube-face bottom">REST</div>
+                                </div>
+                                <div class="tech-cube" style="--delay: 0.5s">
+                                    <div class="cube-face front">AWS</div>
+                                    <div class="cube-face back">GCP</div>
+                                    <div class="cube-face right">Docker</div>
+                                    <div class="cube-face left">K8s</div>
+                                    <div class="cube-face top">Cloud</div>
+                                    <div class="cube-face bottom">DevOps</div>
+                                </div>
+                                <div class="tech-cube" style="--delay: 1s">
+                                    <div class="cube-face front">MongoDB</div>
+                                    <div class="cube-face back">MySQL</div>
+                                    <div class="cube-face right">Redis</div>
+                                    <div class="cube-face left">Kafka</div>
+                                    <div class="cube-face top">Data</div>
+                                    <div class="cube-face bottom">Stream</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section -->
+        <section id="experience" class="section-advanced dark-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Experience Journey</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
+                        <div class="timeline-dot timeline-dot-animate"></div>
+                        <div class="timeline-content timeline-highlight">
+                            <div class="timeline-year">03/2023 - Present</div>
+                            <h4>Subject Matter Expert-Python / DevOps Engineer</h4>
+                            <div class="company">Huawei Cloud Middle East, Abu Dhabi, UAE</div>
+                            <p>Working on Abu Dhabi Govt Project, CloudScope platform for O&M for SRE, Business operations. Built REST APIs and microservices for CloudScope and backend for G42 Cloud Platform & Support Tools.</p>
+                            <ul class="animated-list">
+                                <li data-aos="fade-up" data-aos-delay="300">Built REST APIs and microservices for CloudScope platform</li>
+                                <li data-aos="fade-up" data-aos-delay="400">Backend development for G42 Cloud Platform & Support Tools</li>
+                                <li data-aos="fade-up" data-aos-delay="500">Proficiency in MongoDB, Mongo Ops Manager, MySQL</li>
+                                <li data-aos="fade-up" data-aos-delay="600">IMOC: Cloud monitoring platform on Core42 Cloud with Python plugins</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="700">Python</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="750">Django</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="800">MongoDB</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="850">MySQL</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="900">Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
+                        <div class="timeline-dot timeline-dot-animate"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">10/2022 - 03/2023</div>
+                            <h4>Freelance Senior Software Engineer</h4>
+                            <div class="company">Miratech Group (Client: BlackRock), Remote, India</div>
+                            <p>Developed Data Loaders for Aladdin portfolio management tool with focus on backup and disaster recovery solutions.</p>
+                            <ul class="animated-list">
+                                <li data-aos="fade-up" data-aos-delay="400">Developed Data Loaders for Aladdin portfolio management tool</li>
+                                <li data-aos="fade-up" data-aos-delay="500">Implemented backup and disaster recovery solutions</li>
+                                <li data-aos="fade-up" data-aos-delay="600">Managed and optimized database performance</li>
+                                <li data-aos="fade-up" data-aos-delay="700">Designed and deployed scalable database architectures</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="800">Python</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="850">Data Loaders</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="900">Database</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="950">Backup</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+                        <div class="timeline-dot timeline-dot-animate"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">02/2020 - 10/2022</div>
+                            <h4>Senior Software Engineer</h4>
+                            <div class="company">Karza Technologies, Mumbai, India</div>
+                            <p>Built low latency APIs for TotalKYC product using Serverless Architecture and developed Generic Batch Processing System.</p>
+                            <ul class="animated-list">
+                                <li data-aos="fade-up" data-aos-delay="500">Built low latency APIs for TotalKYC product (Serverless Architecture)</li>
+                                <li data-aos="fade-up" data-aos-delay="600">Owned Health Checker project for API status notifications</li>
+                                <li data-aos="fade-up" data-aos-delay="700">Developed Generic Batch Processing System</li>
+                                <li data-aos="fade-up" data-aos-delay="800">FloodGate for concurrency control using Redis</li>
+                                <li data-aos="fade-up" data-aos-delay="900">Experience with Synchronous/Asynchronous APIs</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="1000">Python</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="1050">Serverless</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="1100">Redis</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="1150">APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="400" data-aos-duration="800">
+                        <div class="timeline-dot timeline-dot-animate"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">02/2018 - 01/2020</div>
+                            <h4>Software Developer</h4>
+                            <div class="company">Quantiphi Analytics, Mumbai, India</div>
+                            <p>Developed Smart Workflow pipelines with Django Microservices & Google Cloud, integrating AI/ML models into low-latency applications.</p>
+                            <ul class="animated-list">
+                                <li data-aos="fade-up" data-aos-delay="600">Developed Smart Workflow pipelines with Django Microservices & Google Cloud</li>
+                                <li data-aos="fade-up" data-aos-delay="700">Integrated AI/ML models into low-latency, high-availability applications</li>
+                                <li data-aos="fade-up" data-aos-delay="800">Agile development for rapid prototyping and testing</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="900">Django</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="950">GCP</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="1000">AI/ML</span>
+                                <span class="tech-tag" data-aos="zoom-in" data-aos-delay="1050">Microservices</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-advanced">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                    <span class="section-number" data-aos="zoom-in" data-aos-delay="100">03</span>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">Tech Arsenal</h2>
+                    <div class="section-line" data-aos="scale-x" data-aos-delay="400"></div>
+                </div>
+                <div class="tech-ecosystem">
+                    <div class="tech-category" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                        <h4 class="category-title" data-aos="fade-up" data-aos-delay="500">
+                            <i class="fas fa-code"></i>
+                            Backend Mastery
+                        </h4>
+                        <div class="tech-skills">
+                            <div class="skill-item" data-aos="slide-right" data-aos-delay="700">
+                                <img src="{{ url_for('static', filename='tech/python.svg') }}" alt="Python">
+                                <span>Python</span>
+                                <div class="skill-level" style="--level: 95%"></div>
+                            </div>
+                            <div class="skill-item" data-aos="slide-right" data-aos-delay="800">
+                                <img src="{{ url_for('static', filename='tech/django.svg') }}" alt="Django">
+                                <span>Django</span>
+                                <div class="skill-level" style="--level: 90%"></div>
+                            </div>
+                            <div class="skill-item" data-aos="slide-right" data-aos-delay="900">
+                                <img src="{{ url_for('static', filename='tech/flask.svg') }}" alt="Flask">
+                                <span>Flask</span>
+                                <div class="skill-level" style="--level: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-category" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+                        <h4 class="category-title" data-aos="fade-up" data-aos-delay="600">
+                            <i class="fas fa-database"></i>
+                            Data Management
+                        </h4>
+                        <div class="tech-skills">
+                            <div class="skill-item" data-aos="slide-left" data-aos-delay="800">
+                                <img src="{{ url_for('static', filename='tech/mongodb.svg') }}" alt="MongoDB">
+                                <span>MongoDB</span>
+                                <div class="skill-level" style="--level: 85%"></div>
+                            </div>
+                            <div class="skill-item" data-aos="slide-left" data-aos-delay="900">
+                                <img src="{{ url_for('static', filename='tech/mysql.svg') }}" alt="MySQL">
+                                <span>MySQL</span>
+                                <div class="skill-level" style="--level: 82%"></div>
+                            </div>
+                            <div class="skill-item" data-aos="slide-left" data-aos-delay="1000">
+                                <img src="{{ url_for('static', filename='tech/redis.svg') }}" alt="Redis">
+                                <span>Redis</span>
+                                <div class="skill-level" style="--level: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                        <h4 class="category-title" data-aos="fade-up" data-aos-delay="700">
+                            <i class="fas fa-cloud"></i>
+                            Cloud & DevOps
+                        </h4>
+                        <div class="tech-skills">
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">
+                                <img src="{{ url_for('static', filename='tech/aws.svg') }}" alt="AWS">
+                                <span>AWS</span>
+                                <div class="skill-level" style="--level: 88%"></div>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">
+                                <img src="{{ url_for('static', filename='tech/gcp.svg') }}" alt="GCP">
+                                <span>GCP</span>
+                                <div class="skill-level" style="--level: 75%"></div>
+                            </div>
+                            <div class="skill-item" data-aos="zoom-in" data-aos-delay="1100">
+                                <img src="{{ url_for('static', filename='tech/docker.svg') }}" alt="Docker">
+                                <span>Docker</span>
+                                <div class="skill-level" style="--level: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-advanced dark-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                    <span class="section-number" data-aos="zoom-in" data-aos-delay="100">04</span>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">Education Journey</h2>
+                    <div class="section-line" data-aos="scale-x" data-aos-delay="400"></div>
+                </div>
+                <div class="education-timeline">
+                    <div class="education-item" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                        <div class="education-card">
+                            <div class="education-icon" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-year" data-aos="fade-up" data-aos-delay="600">2014 - 2017</div>
+                                <h4 class="education-degree" data-aos="fade-up" data-aos-delay="700">Bachelor of Engineering - Information Technology</h4>
+                                <div class="education-institution" data-aos="fade-up" data-aos-delay="800">University of Pune, Maharashtra, India</div>
+                                <p class="education-description" data-aos="fade-up" data-aos-delay="900">
+                                    Completed a full-time Bachelor of Engineering program with comprehensive study of 
+                                    Information Technology fundamentals including programming, software engineering, 
+                                    database management, networking, and system design. Built strong foundation in 
+                                    problem-solving and technical analysis.
+                                </p>
+                                <div class="education-highlights">
+                                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="1000">
+                                        <i class="fas fa-award"></i>
+                                        <span>First Class with Distinction</span>
+                                    </div>
+                                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="1100">
+                                        <i class="fas fa-code"></i>
+                                        <span>Information Technology Excellence</span>
+                                    </div>
+                                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="1200">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>Software Development Focus</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-item" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+                        <div class="education-card">
+                            <div class="education-icon" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-year" data-aos="fade-up" data-aos-delay="700">2011 - 2014</div>
+                                <h4 class="education-degree" data-aos="fade-up" data-aos-delay="800">Diploma in Engineering</h4>
+                                <div class="education-institution" data-aos="fade-up" data-aos-delay="900">Government Polytechnic, Nanded, Maharashtra, India</div>
+                                <p class="education-description" data-aos="fade-up" data-aos-delay="1000">
+                                    Completed a full-time three-year Diploma in Engineering program with focus on 
+                                    practical engineering applications, technical skills development, and hands-on 
+                                    project experience. Established strong foundation in engineering principles 
+                                    and technical problem-solving.
+                                </p>
+                                <div class="education-highlights">
+                                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="1100">
+                                        <i class="fas fa-medal"></i>
+                                        <span>First Class with Distinction</span>
+                                    </div>
+                                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="1200">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Engineering Excellence</span>
+                                    </div>
+                                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="1300">
+                                        <i class="fas fa-project-diagram"></i>
+                                        <span>Technical Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-advanced dark-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                    <span class="section-number" data-aos="zoom-in" data-aos-delay="100">05</span>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">Let's Connect</h2>
+                    <div class="section-line" data-aos="scale-x" data-aos-delay="400"></div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="contact-info">
+                            <h3 class="contact-heading" data-aos="fade-up" data-aos-delay="500">Ready to build something amazing?</h3>
+                            <p class="contact-description" data-aos="fade-up" data-aos-delay="600">
+                                I'm always interested in discussing new opportunities, 
+                                challenging projects, and innovative solutions. Let's talk about 
+                                how we can bring your ideas to life.
+                            </p>
+                            <div class="contact-methods">
+                                <div class="contact-method" data-aos="slide-right" data-aos-delay="700">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">Email</span>
+                                        <a href="mailto:girish.fedram@gmail.com" class="contact-value">girish.fedram@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-method" data-aos="slide-right" data-aos-delay="800">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">LinkedIn</span>
+                                        <a href="https://linkedin.com/in/girish-fedram" class="contact-value">girish-fedram</a>
+                                    </div>
+                                </div>
+                                <div class="contact-method" data-aos="slide-right" data-aos-delay="900">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">GitHub</span>
+                                        <a href="https://github.com/girish-fedram" class="contact-value">girish-fedram</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                        <form class="contact-form-advanced" data-aos="fade-up" data-aos-delay="600">
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="700">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="800">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="900">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="1000">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <span class="form-line"></span>
+                            </div>
+                            <button type="submit" class="btn-send" data-aos="zoom-in" data-aos-delay="1100">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon">
+                                    <i class="fas fa-paper-plane"></i>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-advanced">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Girish Fedram. Crafted with passion and precision.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/girish-fedram" class="social-link" title="GitHub">
+                        <img src="{{ url_for('static', filename='tech/github.svg') }}" alt="GitHub" class="social-logo">
+                    </a>
+                    <a href="https://twitter.com/girish_fedram" class="social-link" title="X (Twitter)">
+                        <img src="{{ url_for('static', filename='tech/x-twitter.svg') }}" alt="X (Twitter)" class="social-logo">
+                    </a>
+                    <a href="https://linkedin.com/in/girish-fedram" class="social-link" title="LinkedIn">
+                        <img src="{{ url_for('static', filename='tech/linkedin.svg') }}" alt="LinkedIn" class="social-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS with working settings
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Custom Cursor
+        const cursor = document.createElement('div');
+        cursor.className = 'cursor';
+        document.body.appendChild(cursor);
+
+        const cursorFollower = document.createElement('div');
+        cursorFollower.className = 'cursor-follower';
+        document.body.appendChild(cursorFollower);
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            const distX = mouseX - cursorX;
+            const distY = mouseY - cursorY;
+            
+            cursorX += distX * 0.1;
+            cursorY += distY * 0.1;
+            
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            
+            cursorFollower.style.left = cursorX + 'px';
+            cursorFollower.style.top = cursorY + 'px';
+            
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        document.querySelector('.contact-form-advanced').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message (you can replace this with actual form submission)
+            const btn = this.querySelector('.btn-send');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="btn-text">Sending...</span>';
+            btn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                btn.innerHTML = '<span class="btn-text">Message Sent!</span> <span class="btn-icon"><i class="fas fa-check"></i></span>';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Typing effect for terminal prompt
+        // Initialize when page loads
+        window.addEventListener('load', () => {
+            // Role switching animation
+            const roles = document.querySelectorAll('.role');
+            let currentRole = 0;
+            
+            function switchRole() {
+                roles[currentRole].classList.remove('active');
+                currentRole = (currentRole + 1) % roles.length;
+                roles[currentRole].classList.add('active');
+            }
+            
+            // Switch roles every 3 seconds
+            setInterval(switchRole, 3000);
+            
+            // Show floating download button after 5 seconds
+            setTimeout(() => {
+                const floatingBtn = document.getElementById('floatingDownloadBtn');
+                if (floatingBtn) {
+                    floatingBtn.classList.add('show');
+                }
+            }, 5000);
+        });
+
+        // Add parallax effect to hero grid
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroGrid = document.querySelector('.hero-grid');
+            if (heroGrid) {
+                heroGrid.style.transform = `translate(${scrolled * 0.1}px, ${scrolled * 0.1}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
